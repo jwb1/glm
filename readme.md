@@ -52,7 +52,18 @@ glm::mat4 camera(float Translate, glm::vec2 const& Rotate)
 
 ## Release notes
 
-### [GLM 0.9.9.4](https://github.com/g-truc/glm/tree/master) - 2018-1X-XX
+### [GLM 0.9.9.6](https://github.com/g-truc/glm/tree/master)
+#### Improvements:
+- Added Visual C++ 2019 detection
+- Added Visual C++ 2017 15.8 and 15.9 detection
+
+### [GLM 0.9.9.5](https://github.com/g-truc/glm/releases/tag/0.9.9.5) - 2019-04-01
+#### Fixes:
+- Fixed build errors when defining GLM_ENABLE_EXPERIMENTAL #884 #883
+- Fixed 'if constexpr' warning #887
+- Fixed missing declarations for frexp and ldexp #886
+
+### [GLM 0.9.9.4](https://github.com/g-truc/glm/releases/tag/0.9.9.4) - 2019-03-19
 #### Features:
 - Added mix implementation for matrices in EXT_matrix_common #842
 - Added BUILD_SHARED_LIBS and BUILD_STATIC_LIBS build options #871

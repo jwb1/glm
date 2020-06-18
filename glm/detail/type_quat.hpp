@@ -95,6 +95,10 @@ namespace glm
 		template<typename U, qualifier P>
 		GLM_FUNC_DECL GLM_CONSTEXPR GLM_EXPLICIT qua(qua<U, P> const& q);
 
+		/// Explicit conversion constructors
+		template<typename W, typename X, typename Y, typename Z>
+		GLM_FUNC_DECL GLM_CONSTEXPR qua(W w, X x, Y y, Z z);
+
 		/// Explicit conversion operators
 #		if GLM_HAS_EXPLICIT_CONVERSION_OPERATORS
 			GLM_FUNC_DECL explicit operator mat<3, 3, T, Q>() const;

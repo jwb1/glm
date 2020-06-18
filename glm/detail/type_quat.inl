@@ -158,6 +158,22 @@ namespace detail
 #		endif
 	{}
 
+	template<typename T, qualifier Q>
+	template<typename W, typename X, typename Y, typename Z>
+	GLM_FUNC_QUALIFIER GLM_CONSTEXPR qua<T, Q>::qua(W _w, X _x, Y _y, Z _z)
+#		ifdef GLM_FORCE_QUAT_DATA_WXYZ
+			: w(static_cast<T>(_w))
+			, x(static_cast<T>(_x))
+			, y(static_cast<T>(_y))
+			, z(static_cast<T>(_z))
+#		else
+			: x(static_cast<T>(_x))
+			, y(static_cast<T>(_y))
+			, z(static_cast<T>(_z))
+			, w(static_cast<T>(_w))
+#		endif
+	{}
+
 	//template<typename valType>
 	//GLM_FUNC_QUALIFIER qua<valType>::qua
 	//(
